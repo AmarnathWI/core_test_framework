@@ -36,7 +36,8 @@ RSpec.configure do |c|
 end
 
 AllureRSpec.configure do |c|
-  c.output_dir = EnvironmentVariables.env_constants[:allure_raw_reports_folder_path].to_s
+  #c.output_dir = EnvironmentVariables.env_constants[:allure_raw_reports_folder_path].to_s
+  #default folder gen/allure-results
   c.clean_dir = false
   c.logging_level = Logger::WARN
 end
@@ -93,8 +94,10 @@ RSpec.configure do |config|
   config.after(:all) do |example|
    Capybara.current_session.driver.quit
    #command 'allure generate #{EnvironmentVariables.env_constants[:allure_raw_reports_folder_path]} -o #{EnvironmentVariables.env_constants[:allure_reports_folder_path]}'
-  # system("allure generate #{EnvironmentVariables.env_constants[:allure_raw_reports_folder_path]} -o #{EnvironmentVariables.env_constants[:allure_reports_folder_path]}")
-  # system("allure serve #{EnvironmentVariables.env_constants[:allure_raw_reports_folder_path]}")
+   # system("allure generate #{EnvironmentVariables.env_constants[:allure_raw_reports_folder_path]} -o #{EnvironmentVariables.env_constants[:allure_reports_folder_path]}")
+   # system("allure serve #{EnvironmentVariables.env_constants[:allure_raw_reports_folder_path]}")
+   #  system("cp gen/allure-results #{EnvironmentVariables.env_constants[:allure_raw_reports_folder_path]}")
+   # system("allure serve gen/allure-results")
   end
 
   config.after(:each) do |example|

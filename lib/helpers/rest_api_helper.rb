@@ -8,7 +8,6 @@ module Helper
       def get_attribs(uri,attributes)
 
         uri = URI.parse(uri)
-        p attributes['params']
         uri.query = URI.encode_www_form(attributes['params'])
         http = Net::HTTP.new(uri.host, uri.port)
         request = Net::HTTP::Get.new(uri.request_uri)

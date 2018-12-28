@@ -12,8 +12,6 @@ module Helper
       current_logger_file = File.join( EnvironmentVariables.env_constants[:logger_folder_path] , current_rspec  + '.log')
 
       #to create file directory if not present
-      puts EnvironmentVariables.env_constants[:test_data_folder_path]
-      puts File.directory?(EnvironmentVariables.env_constants[:test_data_folder_path])
       if File.directory?(EnvironmentVariables.env_constants[:test_data_folder_path])
         unless File.directory?(EnvironmentVariables.env_constants[:logger_folder_path] )
           FileUtils.mkdir_p(EnvironmentVariables.env_constants[:logger_folder_path] )

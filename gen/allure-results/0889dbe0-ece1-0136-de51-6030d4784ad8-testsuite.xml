@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<ns2:test-suite xmlns="" xmlns:ns2="urn:model.allure.qatools.yandex.ru" start="1546009995384" stop="1546009999738">
+  <name>create order_requests 1</name>
+  <title>create order_requests 1</title>
+  <test-cases>
+    <test-case start="1546009995384" stop="1546009999737" status="broken">
+      <name>create order_requests 1 should create order requests 1</name>
+      <title>create order_requests 1 should create order requests 1</title>
+      <failure>
+        <message>RSpec::Core::MultipleExceptionError</message>
+        <stack-trace/>
+      </failure>
+      <steps>
+        <step start="1546009997390" stop="1546009999530" status="passed">
+          <name> Call to create order request</name>
+          <title> Call to create order request</title>
+          <attachments>
+            <attachment source="96d3dbe67c2b9049a4076aa4200bfe768457a8884d00bfe4566fd93584bda5e8-attachment.json" title="The given params" size="187" type="application/json"/>
+          </attachments>
+        </step>
+        <step start="1546009999530" stop="1546009999536" status="passed">
+          <name> should get success response for order requests</name>
+          <title> should get success response for order requests</title>
+          <attachments>
+            <attachment source="95d82cc54d4826f6ca86020b59725129cab568f04dbcd5d31ab10af6df15bf48-attachment.json" title="The response" size="25" type="application/json"/>
+          </attachments>
+        </step>
+        <step start="1546009999536" stop="1546009999692" status="passed">
+          <name> Call to get all order request</name>
+          <title> Call to get all order request</title>
+          <attachments/>
+        </step>
+        <step start="1546009999692" stop="1546009999737" status="failed">
+          <name> should get created order request</name>
+          <title> should get created order request</title>
+          <attachments>
+            <attachment source="491ce47bea15da91e09dc16f09d37d4b496929dd42ca290ba4b57516f1c66843-attachment.json" title="The get response" size="20254" type="application/json"/>
+          </attachments>
+        </step>
+      </steps>
+      <attachments/>
+      <labels>
+        <label name="feature" value="test_feature_1"/>
+        <label name="thread" value="70321906650640"/>
+        <label name="host" value="Amarnaths-MacBook-Air.local"/>
+      </labels>
+      <parameters/>
+    </test-case>
+  </test-cases>
+  <labels>
+    <label name="feature" value="test_feature_1"/>
+    <label name="thread" value="70321906650640"/>
+    <label name="host" value="Amarnaths-MacBook-Air.local"/>
+  </labels>
+</ns2:test-suite>
