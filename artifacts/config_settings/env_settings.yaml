@@ -1,0 +1,17 @@
+#Please give only pne level of objects in this setting file
+
+#   The type of environment we are trying to use
+#   Takes in values : web, native-app
+environment: web
+#   The type of browser we are trying to use
+#   Takes in values : chrome,firefox,ie,safari
+browser_name: chrome
+#   The type of app we are trying to use
+#   Takes in values : ios
+app_type: ios
+
+#   The environment which are trying to execute
+execution_environment: SIT
+
+#   The testdata file name
+testdata_type: json

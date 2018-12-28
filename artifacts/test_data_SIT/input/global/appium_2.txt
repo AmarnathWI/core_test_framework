@@ -1,0 +1,8 @@
+[caps]
+platformName = "ios"
+platformVersion = "12.1"
+deviceName ="iPad Air 2"
+udid = '35AE7A9D-6DED-4BCF-BEFE-27396B5984F4'
+automationName = 'XCUITest'
+app = "./artifacts/test_data/input/common_files/UICatalog.app.zip"
+connectHardwareKeyboard = false

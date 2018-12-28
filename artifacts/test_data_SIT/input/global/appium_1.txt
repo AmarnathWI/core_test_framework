@@ -1,0 +1,8 @@
+[caps]
+platformName = "ios"
+platformVersion = "12.1"
+deviceName ="iPhone Simulator"
+udid = '933D14DC-7138-4EBE-942D-175E872E1242'
+automationName = 'XCUITest'
+app = "./artifacts/test_data/input/common_files/UICatalog.app.zip"
+connectHardwareKeyboard = false
