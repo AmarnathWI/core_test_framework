@@ -18,7 +18,9 @@ module Helper
         when 'yaml'
           test_data = FileReaderHelper.read_yaml_data(test_data_file + "_td.yaml")
         end
-        test_data
+        #adding global data to the test data with prefix as gv_
+        global_test_data = FileReaderHelper.read_yaml_data(EnvironmentVariables.env_constants[:global_test_data_file_path]).select {|key,value| key.start_with?('gv_')}
+        test_data.map! {|data| data.merge(global_test_data)} # returns the test data array with global data in it
       end
     end
   end

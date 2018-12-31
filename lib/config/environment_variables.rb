@@ -4,7 +4,7 @@ class EnvironmentVariables
     def set_env_variables
       read_config_file
       set_variables
-      env_constants
+      set_env_constants
     end
 
     # Read config file from ENV['PROPERTIES']
@@ -22,15 +22,19 @@ class EnvironmentVariables
     end
 
     # Sets ENV variables if not initialize yet
-    def env_constants
-      env_constants = Hash.new
+    def set_env_constants
+      @env_constants = Hash.new
+      @env_constants[:test_data_folder_path] = File.join(FrameworkConstants.artifacts_folderpath, 'test_data_'+ ENV['EXECUTION_ENVIRONMENT'])
+      @env_constants[:output_test_data_folder_path] = File.join(FrameworkConstants.artifacts_folderpath, 'test_data_'+ ENV['EXECUTION_ENVIRONMENT'],'output')
+      @env_constants[:logger_folder_path] = File.join(env_constants[:test_data_folder_path], 'log', 'logger_file', ENV['CURRENT_TIME'] )
+      @env_constants[:allure_raw_reports_folder_path] = File.join(FrameworkConstants.artifacts_folderpath, 'test_data_'+ ENV['EXECUTION_ENVIRONMENT'], 'reports', 'allure_raw_reports', ENV['CURRENT_TIME'])
+      @env_constants[:allure_reports_folder_path] = File.join(FrameworkConstants.artifacts_folderpath, 'test_data_'+ ENV['EXECUTION_ENVIRONMENT'], 'reports', 'allure_reports', ENV['CURRENT_TIME'] )
+      @env_constants[:global_test_data_file_path] = File.join(env_constants[:test_data_folder_path], 'input', 'global', ENV['ENVIRONMENT'], FrameworkConstants.global_test_data_yaml_filename)
+      @env_constants.with_indifferent_access
+    end
 
-      env_constants[:test_data_folder_path] = File.join(FrameworkConstants.artifacts_folderpath, 'test_data_'+ ENV['EXECUTION_ENVIRONMENT'])
-      env_constants[:output_test_data_folder_path] = File.join(FrameworkConstants.artifacts_folderpath, 'test_data_'+ ENV['EXECUTION_ENVIRONMENT'],'output')
-      env_constants[:logger_folder_path] = File.join(env_constants[:test_data_folder_path], 'log', 'logger_file', ENV['CURRENT_TIME'] )
-      env_constants[:allure_raw_reports_folder_path] = File.join(FrameworkConstants.artifacts_folderpath, 'test_data_'+ ENV['EXECUTION_ENVIRONMENT'], 'reports', 'allure_raw_reports', ENV['CURRENT_TIME'])
-      env_constants[:allure_reports_folder_path] = File.join(FrameworkConstants.artifacts_folderpath, 'test_data_'+ ENV['EXECUTION_ENVIRONMENT'], 'reports', 'allure_reports', ENV['CURRENT_TIME'] )
-      env_constants.with_indifferent_access
+    def env_constants
+      @env_constants
     end
 
 

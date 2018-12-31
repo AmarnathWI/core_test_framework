@@ -1,9 +1,0 @@
-{
-  "requester_id": 390483000,
-  "requester_type": "DepositAllocation",
-  "goal_id": 390483000,
-  "strategy_id": 390483000,
-  "amount": 40000.0,
-  "currency": "USD",
-  "buy_sell": "buy"
-}

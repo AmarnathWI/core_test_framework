@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<ns2:test-suite xmlns="" xmlns:ns2="urn:model.allure.qatools.yandex.ru" start="1546244966377" stop="1546244983972">
+  <name>Demo Test</name>
+  <title>Demo Test</title>
+  <test-cases>
+    <test-case start="1546244966378" stop="1546244983761" status="passed">
+      <name>Demo Test visit Facebook</name>
+      <title>Demo Test visit Facebook</title>
+      <steps>
+        <step start="1546244966382" stop="1546244970147" status="passed">
+          <name>Going to url</name>
+          <title>Going to url</title>
+          <attachments/>
+        </step>
+        <step start="1546244970147" stop="1546244970859" status="passed">
+          <name>Trying to login</name>
+          <title>Trying to login</title>
+          <attachments>
+            <attachment source="8b7d463afbb074ddf13a02340975f2d8df3a7ceeb8140b4bbcc44d6130702764-attachment.txt" title="The response" size="16" type="text/plain"/>
+          </attachments>
+        </step>
+      </steps>
+      <attachments/>
+      <labels>
+        <label name="feature" value="Demo Test feature"/>
+        <label name="thread" value="70234539052560"/>
+        <label name="host" value="Amarnaths-MacBook-Air.local"/>
+      </labels>
+      <parameters/>
+    </test-case>
+  </test-cases>
+  <labels>
+    <label name="feature" value="Demo Test feature"/>
+    <label name="thread" value="70234539052560"/>
+    <label name="host" value="Amarnaths-MacBook-Air.local"/>
+  </labels>
+</ns2:test-suite>

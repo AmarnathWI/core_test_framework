@@ -1,0 +1,6 @@
+#Please note varaibles with prefix "gv_" will only be cosidered
+
+gv_order_request_url: http://coredev-oms-staging.weinvest.net/order_management_service/api/v1/order_requests
+gv_order_request_auth_token: testqwe123
+
+

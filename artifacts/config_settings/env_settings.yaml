@@ -1,7 +1,7 @@
 #Please give only pne level of objects in this setting file
 
 #   The type of environment we are trying to use
-#   Takes in values : web, native-app
+#   Takes in values : web, native-app, api
 environment: web
 #   The type of browser we are trying to use
 #   Takes in values : chrome,firefox,ie,safari

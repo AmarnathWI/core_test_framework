@@ -2,15 +2,14 @@
 describe 'create order_requests' , :feature => "test_feature_0"  do
 
   before do
-    Airborne.configure do |config|
-      config.base_url = 'http://coredev-oms-staging.weinvest.net/order_management_service/api/v1/order_requests'
-      config.headers = { 'Authorization' => 'testqwe123' }
-    end
     @test_data = Base.instance.runtime_data[:test_data].first
     @order_generation_request_params = @test_data[:create_order_generation_request_params]
     time = Time.now.nsec
     @create_order_request_params = eval(@test_data[:create_order_request_params].to_s.gsub("\"give_rt_time_data\"") { time }).with_indifferent_access
-
+    Airborne.configure do |config|
+      config.base_url = @test_data[:gv_order_request_url]
+      config.headers = { 'Authorization' => @test_data[:gv_order_request_auth_token] }
+    end
   end
 
   it 'should create order requests' do |t|

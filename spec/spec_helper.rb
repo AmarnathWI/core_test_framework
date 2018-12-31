@@ -92,12 +92,14 @@ RSpec.configure do |config|
   end
 
   config.after(:all) do |example|
-   Capybara.current_session.driver.quit
+    Capybara.current_session.driver.quit
    #command 'allure generate #{EnvironmentVariables.env_constants[:allure_raw_reports_folder_path]} -o #{EnvironmentVariables.env_constants[:allure_reports_folder_path]}'
    # system("allure generate #{EnvironmentVariables.env_constants[:allure_raw_reports_folder_path]} -o #{EnvironmentVariables.env_constants[:allure_reports_folder_path]}")
-   # system("allure serve #{EnvironmentVariables.env_constants[:allure_raw_reports_folder_path]}")
-   #  system("cp gen/allure-results #{EnvironmentVariables.env_constants[:allure_raw_reports_folder_path]}")
-   # system("allure serve gen/allure-results")
+    FileUtils.mkdir_p(EnvironmentVariables.env_constants[:allure_raw_reports_folder_path])
+    #system("allure serve #{EnvironmentVariables.env_constants[:allure_raw_reports_folder_path]}")
+
+    system("cp -R gen/allure-results #{EnvironmentVariables.env_constants[:allure_raw_reports_folder_path]}")
+    #system("allure serve gen/allure-results")
   end
 
   config.after(:each) do |example|

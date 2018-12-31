@@ -118,8 +118,10 @@
         "amount": 40000.0,
         "currency": "USD",
         "buy_sell": "buy"
-      }
+      },
+      "gv_order_request_url": "http://coredev-oms-staging.weinvest.net/order_management_service/api/v1/order_requests",
+      "gv_order_request_auth_token": "testqwe123"
     }
   ],
-  "order_request_id": 314
+  "order_request_id": 331
 }

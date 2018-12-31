@@ -11,7 +11,12 @@ module Helper
       end
 
       def read_yaml_data(file)
-        YAML.load_file(file)
+        if File.exist?(file)
+          return YAML.load_file(file)
+        else
+          #abort('imporper BROWSER_NAME')
+          raise RuntimeError, 'Invalid file path : ' + file.to_s
+        end
       end
 
       def read_json_data(file)
